@@ -13,7 +13,6 @@ public class Bolt : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Vector3 target = transform.position;
