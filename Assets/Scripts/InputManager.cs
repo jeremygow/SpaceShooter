@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     // Inputs
     public InputActionAsset controls;
     public InputAction moveAction;
+    public InputAction fireAction;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour
     void Start()
     {
         moveAction = controls.FindAction("Move");
+        fireAction = controls.FindAction("Fire");
     }
 
     // Update is called once per frame

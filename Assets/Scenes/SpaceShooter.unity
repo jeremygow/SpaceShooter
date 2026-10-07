@@ -182,6 +182,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 62ea8a5ca94c546f29ba6dea8f379a7b, type: 3}
   m_PrefabInstance: {fileID: 194735611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &517296870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517296871}
+  m_Layer: 0
+  m_Name: BoltSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &517296871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517296870}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1977661078}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +399,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &985917526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 985917528}
+  - component: {fileID: 985917527}
+  m_Layer: 0
+  m_Name: Boundary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!65 &985917527
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985917526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 4, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &985917528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985917526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059632283
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +488,15 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 9b831d72-9139-4880-a97e-b8a1ae8e9ec0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
+  fireAction:
+    m_Name: Fire
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 45aced01-0ad5-4199-99e2-57fbc3694fa3
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings: []
@@ -515,6 +608,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 400000, guid: d9808401c68af274a8edfbed3d1b53c7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 231424515}
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: d9808401c68af274a8edfbed3d1b53c7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 517296871}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: d9808401c68af274a8edfbed3d1b53c7, type: 3}
       insertIndex: -1
@@ -681,18 +777,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  tilt: 5
   bounds:
     serializedVersion: 2
     x: -4.5
     y: -1.7
     width: 9
     height: 10
+  boltSpawnPoint: {fileID: 517296871}
+  bolt: {fileID: 7627841216145845132, guid: cf93e0547bab34b22b6fc95df9ca47a2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1849098193}
-  - {fileID: 1576414894}
   - {fileID: 1059632286}
+  - {fileID: 1576414894}
+  - {fileID: 1849098193}
+  - {fileID: 985917528}
