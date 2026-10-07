@@ -15,6 +15,7 @@ public class DestroyAsterioid : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
             GameObject.Destroy(this);
+            GameManager.GetInstance().ScoreAsteroid();
         }
     }
 }
